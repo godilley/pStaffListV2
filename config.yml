@@ -1,0 +1,34 @@
+############################################################################################################################################################
+#####################                                    ##########################################                                    #####################
+###################                  NOTES                 ######################################                  NOTES                 ###################
+#####################                                    ##########################################                                    #####################
+############################################################################################################################################################
+##                            For Plugin Support:                           ####                         Writing In This Config:                          ##
+##                 https://tawk.to/DaChiimp.Spigot.Support                  ####          I suggest using http://codebeautify.org/yaml-validator          ##
+##          Where you can live chat / leave a message (if offline)          ####            otherwise you may break your config and the plugin            ##
+############################################################################################################################################################
+#                                                                            #
+#                                                                            #
+##############################################################################
+##                              MySQL Settings                              ##
+##############################################################################
+db_useMySQL: "false" # Enable MySQL - Must Set Database Settings
+#### Database Settings ####
+db_Host: "localhost" # Database host
+db_Port: "3306" # Database port (default MySQL port "3306")
+db_Database: "database" # Database database
+db_Username: "user" # Database username
+db_Password: "password" # Database username
+##############################################################################
+#                                                                            #
+#                                                                            #
+##############################################################################
+##                             General Settings                             ##
+##############################################################################
+set_inventorySize: "54" # How many slots the inventory has - Accepted Values: (9,18,27,36,45,54) - Can still be multiple pages
+set_multiplePages: "false" # Whether you can have multiple pages of staff?
+set_dateFormat: "EEE MMMMM d yyyy @ hh:mm aaa" # The date format of last login - use: http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+# Inventory Next / Previous Page Buttons # Chest slot number - http://wiki.vg/images/b/bb/DoubleChest-slots.png
+## REQUIRES: set_multiplePages to be true ##
+set_nextPosition: "53" # Where the next button is located
+set_previousPosition: "45" # Where the previous button is located

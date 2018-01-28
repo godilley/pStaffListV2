@@ -1,0 +1,12 @@
+#Set any of these to have "" and the message will not display :)
+prefix: "&7[&aStaffList&7]&r"
+noPerm: "%prefix% &4You do not have permission to do that."
+unknownCommand: "%prefix% &cUnknown command."
+notEnoughArgs: "%prefix% &cIncorrect number of arguments for that command!"
+unknownPlayer: "%prefix% &4Cannot find player %player%."
+notAnInt: "%prefix% &4%int% is not a integer (number)!"
+staffAlreadyAdded: "%prefix% &4%staff% is already added!"
+error: "%prefix% &4There was an error with %error%"
+addedStaff: "%prefix% &aAdded %staff% with rank %rank%"
+removedStaff: "%prefix% &aRemoved %staff% from the staff list"
+staffNotAdded: "%prefix% &a%name% is not added as a staff member!"

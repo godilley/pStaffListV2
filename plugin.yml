@@ -1,0 +1,8 @@
+name: pStaffList
+version: 2.0b
+main: com.dachiimp.pstafflist2.StaffList
+author: DaChiimp
+commands:
+    staff:
+        description: Generic base command.
+softdepend: [Essentials,VanishNoPacket]

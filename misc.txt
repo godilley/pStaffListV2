@@ -1,0 +1,36 @@
+Connection connection = MySQL.openConnection();
+
+if(!MySQL.checkConnection()) {
+    Logger.warn("Error opening connection to initialize player " + player.getName());
+    player.sendMessage("Error initializing you, please contact an admin.");
+    return true;
+}
+
+try {
+    // Query to check
+    final String query = "SELECT * FROM staff WHERE uuid = ?";
+    HashMap<Integer,Object> values = new HashMap<>();
+    values.put(1,player.getUniqueId().toString());
+    final ResultSet rs = SQLManager.query(query,values);
+    // Done query stuff
+
+    boolean hasData = rs.next();
+
+    if(hasData) {
+        // has something
+        player.sendMessage("Already contains you");
+        String rank = rs.getString("rank");
+        String name = rs.getString("player");
+        String uuid = rs.getString("uuid");
+        int position = rs.getInt("position");
+        player.sendMessage("Rank: " + rank + " | Name: " + name + " | UUID: " + uuid + " | Position: " + position);
+    } else {
+        player.sendMessage("Creating you");
+        createPlayer(player);
+    }
+} catch (SQLException e) {
+    Logger.warn("Error SQLException thrown. Stacktrace: ");
+    e.printStackTrace();
+} finally {
+    MySQL.closeConnection();
+}

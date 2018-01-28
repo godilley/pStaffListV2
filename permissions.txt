@@ -1,0 +1,9 @@
+-=[Permissions]=-
+
+Member:
+    staff.member.*
+    staff.member.add
+    staff.member.remove
+Util:
+    staff.reload
+    staff.save
